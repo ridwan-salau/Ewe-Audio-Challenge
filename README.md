@@ -39,14 +39,9 @@ Team members:
 
 ## Usage
 1. Clone the repository and navigate to the directory.
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the training script:
-   ```bash
-   python train.py
-   ```
+2. Install dependencies
+3. Run the training Code
+   
 
 ## Acknowledgements
 This project is part of the Zindi Ewe Audio Translation competition and will be completed as part of the Advanced Machine Learning course. Special thanks to our group **Astronormers** for their collaborative effort.
