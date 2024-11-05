@@ -18,8 +18,8 @@ import sys
 import random
 
 from pathlib import Path
-from models.base import init_weights as base_init_weights
-# from transforms import TrimSilence, STFTTransform, OneHot, collate_fn, Resample
+from archs.base import init_weights as base_init_weights
+from transforms import TrimSilence, STFTTransform, OneHot, collate_fn, Resample
 
 from argparse import ArgumentParser
 
