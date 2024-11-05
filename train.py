@@ -19,7 +19,7 @@ import random
 
 from pathlib import Path
 from archs.base import init_weights as base_init_weights
-from transforms import TrimSilence, STFTTransform, OneHot, collate_fn, Resample
+# from transforms import TrimSilence, STFTTransform, OneHot, collate_fn, Resample
 
 from argparse import ArgumentParser
 
@@ -56,7 +56,6 @@ if not (os.path.exists('./training_data.npy') and os.path.exists('./training_lab
     # create class to load data into DataLoader (and preprocess)
     freq_spectrum = []
     freq_labels = []
-    trim_silence = TrimSilence(sample_rate=48_000)
     start_time = time.time()
     print(f"Processing {len(images)} audio files")
     for widx, wv in enumerate(images):
@@ -78,12 +77,7 @@ if not (os.path.exists('./training_data.npy') and os.path.exists('./training_lab
 
             freq_spectrum.append(fft_magn_dwn.T)
 
-    print("Applying trim silence")
     training_data = np.stack(freq_spectrum, axis=0)
-    print(training_data.shape)
-    # training_data = trim_silence(torch.tensor(training_data)).numpy()
-    min_len = training_data.min(axis=1)
-
     training_labels = np.array(freq_labels)
 
     print(f"Done processing data in {time.time() - start_time:.2f} seconds")
