@@ -27,6 +27,9 @@ args = ArgumentParser()
 args.add_argument('--val_only', action='store_true', default=False)
 args = args.parse_args()
 
+# Add this as a global variable at the top of the file
+global_min, global_max = -1.4100255, 17.374128
+
 def seed_everything(seed=42):
     random.seed(seed)
     os.environ['PYTHONHASHSEED'] = str(seed)
@@ -37,83 +40,135 @@ def seed_everything(seed=42):
     torch.backends.cudnn.benchmark = False
 
 seed_everything(42)
-# Load or preprocess data
-if not (os.path.exists('./training_data.npy') and os.path.exists('./training_labels.npy')):
-    # Data preprocessing code here
-    
+
+def prepare_file(fpath: str):
+    if os.path.isfile(fpath) == 1:
+        fs, data = sw.read(fpath)
+        
+        
+        
+        # convert time domain to frequency domain
+        if len(data.shape) > 1:
+            data = data.mean(axis=1)
+        # transforming the 1-D time-series into a frequency spectrum
+        fft = np.fft.fft(data)
+        fft_centered = np.fft.fftshift(fft)
+        fft_magn = np.log10(np.abs(fft_centered)**2)
+        # print(fft_magn.shape)
+        fft_magn_dwn = ss.resample(fft_magn, 51744, axis=0).astype(np.float32)
+
+        return fft_magn_dwn.T
+
+
+def preprocess_data(mode: str = "training", file_path: str = None):
     # import .wav data & labels
-    img_root = "./TechCabal Ewe Audio Files/"
-    csv_data = pd.read_csv('./Train.csv', sep=',')
-    print(csv_data.keys())
-    images = csv_data['audio_filepath']
-    labels = csv_data['class']
+    audio_root = "./TechCabal Ewe Audio Files/"
 
-    unique_labels = np.unique(labels)
-    print(unique_labels)
-    labels_class = np.arange(0,len(np.unique(labels)))
-    print(labels_class)
+    # Load or preprocess data
+    if mode == "training" and not (os.path.exists('./training_data.npy') and os.path.exists('./training_labels.npy')):
+        csv_data = pd.read_csv(file_path or './Train.csv', sep=',')
+        audio_files = csv_data['audio_filepath']
+        labels = csv_data['class']
+        unique_labels = np.unique(labels)
 
-    # create class to load data into DataLoader (and preprocess)
-    freq_spectrum = []
-    freq_labels = []
-    start_time = time.time()
-    print(f"Processing {len(images)} audio files")
-    for widx, wv in enumerate(images):
-        fpath = os.path.join(img_root, wv)
-        if os.path.isfile(fpath) == 1:
-            fs, data = sw.read(fpath)
+        # create class to load data into DataLoader (and preprocess)
+        freq_spectrum, freq_labels = [], []
+        start_time = time.time()
+        print(f"Processing {len(audio_files)} training audio files")
+        for widx, wv in enumerate(audio_files):
+            fpath = os.path.join(audio_root, wv)
             class_tmp = labels[widx]
             cidx = np.where(class_tmp == unique_labels)[0]
             freq_labels.append(cidx)
-            # convert time domain to frequency domain
-            if len(data.shape) > 1:
-                data = data.mean(axis=1)
-            # transforming the 1-D time-series into a frequency spectrum
-            fft = np.fft.fft(data)
-            fft_centered = np.fft.fftshift(fft)
-            fft_magn = np.log10(np.abs(fft_centered)**2)
-            # print(fft_magn.shape)
-            fft_magn_dwn = ss.resample(fft_magn, 51744, axis=0).astype(np.float32)
+            fft_magn_dwn = prepare_file(fpath)
+            freq_spectrum.append(fft_magn_dwn)
 
-            freq_spectrum.append(fft_magn_dwn.T)
+        training_data = np.stack(freq_spectrum)
+        training_labels = np.array(freq_labels)
 
-    training_data = np.stack(freq_spectrum, axis=0)
-    training_labels = np.array(freq_labels)
+        print(f"Done processing trainig data in {time.time() - start_time:.2f} seconds")
 
-    print(f"Done processing data in {time.time() - start_time:.2f} seconds")
-
-    imgs_length = [freq.shape[0] for freq in training_data]
-    print(np.min(imgs_length))  
+        np.save('training_data.npy', training_data)
+        np.save('training_labels.npy', training_labels)
+        return training_data, training_labels
 
 
-    np.save('training_data.npy', freq_spectrum)
-    np.save('training_labels.npy', freq_labels)
+    if mode == "test" and not os.path.exists('./test_data.npy'):
+        csv_data = pd.read_csv(file_path or './Test_1.csv', sep=',')
+        audio_files = csv_data['audio_filepath']
 
-# Load the training data
-training_data = np.load('./training_data.npy', allow_pickle=True)
-training_labels = np.load('./training_labels.npy', allow_pickle=True)
+        freq_spectrum = []
+        print(f"Processing {len(audio_files)} test audio files")
+        for fpath in audio_files:
+            fpath = os.path.join(audio_root, fpath)
+            fft_magn_dwn = prepare_file(fpath)
+            freq_spectrum.append(fft_magn_dwn)
 
-# Split the data into training and validation sets
-train_data, val_data, train_labels, val_labels = train_test_split(
-    training_data, training_labels, test_size=0.2, random_state=42
-)
+        test_data = np.stack(freq_spectrum)
 
-# Normalize training and validation data
-train_data = (train_data - np.min(train_data)) / (np.max(train_data) - np.min(train_data))
-val_data = (val_data - np.min(val_data)) / (np.max(val_data) - np.min(val_data))
+        np.save('test_data.npy', test_data)
 
-# One-hot encode training and validation labels
-train_labels_tmp = torch.tensor(train_labels.flatten())
-train_labels = nn.functional.one_hot(train_labels_tmp)
-val_labels_tmp = torch.tensor(val_labels.flatten())
-val_labels = nn.functional.one_hot(val_labels_tmp)
+        return test_data, None
 
+    if mode == "training":
+        # Load the training data
+        training_data = np.load('./training_data.npy', allow_pickle=True)
+        training_labels = np.load('./training_labels.npy', allow_pickle=True)
+        return training_data, training_labels
+    
+    if mode == "test":
+        test_data = np.load('./test_data.npy', allow_pickle=True)
+        return test_data, None
+
+def get_training_data():
+    global global_min, global_max
+    training_data, training_labels = preprocess_data("training")
+    
+    # Split the data into training and validation sets
+    train_data, val_data, train_labels, val_labels = train_test_split(
+        training_data, training_labels, test_size=0.2, random_state=42
+    )
+
+    # Calculate normalization parameters from training data only
+    global_min = np.min(train_data)
+    global_max = np.max(train_data)
+    print("global_min, global_max", global_min, global_max)
+
+    # Apply same normalization to both sets
+    train_data = (train_data - global_min) / (global_max - global_min)
+    val_data = (val_data - global_min) / (global_max - global_min)
+
+    # One-hot encode training and validation labels
+    train_labels_tmp = torch.tensor(train_labels.flatten())
+    train_labels = nn.functional.one_hot(train_labels_tmp)
+    val_labels_tmp = torch.tensor(val_labels.flatten())
+    val_labels = nn.functional.one_hot(val_labels_tmp)
+
+    print("Data Shape: ", train_data.shape, train_labels.shape)
+    
+    # Create training and validation datasets and dataloaders
+    train_dataset = MyDataset(train_data, train_labels)
+    val_dataset = MyDataset(val_data, val_labels)
+    dataloader_train = DataLoader(train_dataset, batch_size=64, shuffle=True, pin_memory=True)
+    dataloader_val = DataLoader(val_dataset, batch_size=64, shuffle=False, pin_memory=True)
+
+    return dataloader_train, dataloader_val
+
+def get_test_data():
+    test_data, _ = preprocess_data("test")
+
+    # Normalize test data
+    test_data = (test_data - global_min) / (global_max - global_min)
+
+    # test_dataset = MyDataset(test_data, None)
+    dataloader_test = DataLoader(test_data, batch_size=64, shuffle=False)
+    return dataloader_test
 
 # Dataset and DataLoader
 class MyDataset(Dataset):
-    def __init__(self, imgs, labels):
+    def __init__(self, imgs, labels=None):
         self.imgs = imgs
-        self.labels = labels
+        self.labels = labels if labels is not None else torch.zeros(len(imgs))
 
     def __len__(self):
         return len(self.labels)
@@ -121,12 +176,6 @@ class MyDataset(Dataset):
     def __getitem__(self, idx):
         return self.imgs[idx], self.labels[idx]
 
-print("Data Shape: ", train_data.shape, train_labels.shape)
-# Create training and validation datasets and dataloaders
-train_dataset = MyDataset(train_data, train_labels)
-val_dataset = MyDataset(val_data, val_labels)
-dataloader_train = DataLoader(train_dataset, batch_size=64, shuffle=True, pin_memory=False)
-dataloader_val = DataLoader(val_dataset, batch_size=64, shuffle=False, pin_memory=False)
 
 # Create and initialize the model
 model = base_init_weights(n_classes=8)
@@ -141,8 +190,10 @@ device = torch.device('mps' if torch.backends.mps.is_available() else 'cuda' if 
 model.to(device)
 
 def train():
+    dataloader_train, dataloader_val = get_training_data()
+
     # Training loop
-    epochs = 150
+    epochs = 15
     best_val_accuracy = 0
     val_losses = []
     for epoch in range(epochs):
@@ -204,11 +255,14 @@ def train():
 
         val_losses.append(val_loss)
 
+
 def evaluate():
+    _, dataloader_val = get_training_data()
+
     # Load the best model checkpoint
     print("\nEvaluating best model checkpoint...")
     best_model = base_init_weights(n_classes=8)
-    best_model.load_state_dict(torch.load('best_model.pth'))
+    best_model.load_state_dict(torch.load('best_model.pth', weights_only=True))
     best_model.to(device)
     best_model.eval()
 
@@ -228,6 +282,8 @@ def evaluate():
             
             val_loss += loss.item()
             softmax = nn.Softmax(dim=1)(outputs)
+            # print(1, torch.argmax(softmax, dim=1))
+            # print(2, torch.argmax(labels, dim=1))
             batch_accuracy = (torch.argmax(softmax, dim=1) == torch.argmax(labels, dim=1)).float().mean().item()
             val_accuracy += batch_accuracy
             
@@ -237,13 +293,76 @@ def evaluate():
     val_loss /= len(dataloader_val)
     val_accuracy /= len(dataloader_val)
 
+    print((torch.tensor(predictions) == torch.tensor(true_labels)).float().mean().item())
+
     print(f"\nBest Model Performance:")
     print(f"Validation Loss: {val_loss:.4f}")
     print(f"Validation Accuracy: {val_accuracy:.4f}")
 
+def submission_test():
+    best_model = base_init_weights(n_classes=8)
+    best_model.load_state_dict(torch.load('best_model.pth', weights_only=True))
+    best_model.to(device)
+    best_model.eval()
+
+    test_data, _ = preprocess_data("test")
+
+    # Normalize test data
+    test_data = (test_data - global_min) / (global_max - global_min)
+
+    predictions = []
+
+    with torch.no_grad():
+        for start in range(0, len(test_data), 64):
+            end = start + 64
+            inputs = torch.tensor(test_data[start:end]).to(device)
+            print(inputs.shape)
+            outputs = best_model(inputs)
+            outputs = torch.squeeze(outputs).float()
+            softmax = nn.Softmax(dim=1)(outputs)
+            predictions.extend(torch.argmax(softmax, dim=1).cpu().numpy())
+
+    test_df = pd.read_csv('./Test_1.csv')
+    csv_data = pd.read_csv('./Train.csv', sep=',')
+    labels = csv_data['class']
+    unique_labels = np.unique(labels)
+    print(unique_labels)
+    test_df['class'] = [unique_labels[i] for i in predictions]
+    test_df[['id', 'class']].to_csv('./submission.csv', index=False)
+
+
+    # Test on training data
+    test_data, _ = preprocess_data("test", './Train.csv')
+
+    # Normalize test data
+    test_data = (test_data - global_min) / (global_max - global_min)
+
+    predictions = []
+
+    with torch.no_grad():
+        for start in range(0, 64, 64):
+            end = start + 64
+            inputs = torch.tensor(test_data[start:end]).to(device)
+            print(inputs.shape)
+            outputs = best_model(inputs)
+            outputs = torch.squeeze(outputs).float()
+            softmax = nn.Softmax(dim=1)(outputs)
+            predictions.extend(torch.argmax(softmax, dim=1).cpu().numpy())
+
+    test_df = pd.read_csv('./Train.csv').head(64)
+    csv_data = pd.read_csv('./Train.csv', sep=',')
+    labels = csv_data['class']
+    unique_labels = np.unique(labels)
+    print(unique_labels)
+    test_df['class_pred'] = [unique_labels[i] for i in predictions]
+    test_df.to_csv('./submission_trainng.csv', index=False)
+
+
 if __name__ == '__main__':
     if args.val_only:
         evaluate()
+        submission_test()
     else:
         train()
         evaluate()
+        submission_test()

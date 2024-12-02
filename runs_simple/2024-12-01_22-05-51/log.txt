@@ -1,0 +1,300 @@
+Epoch 0, Batch 0, Loss: 5.2099, LR: 0.010000
+Batch Duration: 12.52s, Epoch Duration: 12.52s, Total Duration: 12.52s
+Epoch 0: Train Loss: 2.9175, Val Loss: 1.9704, Val Accuracy: 26.15%, LR: 0.009998
+Epoch 1, Batch 0, Loss: 2.1433, LR: 0.009998
+Batch Duration: 82.29s, Epoch Duration: 82.29s, Total Duration: 82.29s
+Epoch 1: Train Loss: 2.0292, Val Loss: 1.7414, Val Accuracy: 34.58%, LR: 0.009990
+Epoch 2, Batch 0, Loss: 1.9413, LR: 0.009990
+Batch Duration: 152.85s, Epoch Duration: 152.85s, Total Duration: 152.85s
+Epoch 2: Train Loss: 1.8717, Val Loss: 1.6521, Val Accuracy: 37.49%, LR: 0.009978
+Epoch 3, Batch 0, Loss: 1.6673, LR: 0.009978
+Batch Duration: 222.60s, Epoch Duration: 222.60s, Total Duration: 222.60s
+Epoch 3: Train Loss: 1.6719, Val Loss: 1.3573, Val Accuracy: 51.08%, LR: 0.009961
+Epoch 4, Batch 0, Loss: 1.6479, LR: 0.009961
+Batch Duration: 292.41s, Epoch Duration: 292.41s, Total Duration: 292.41s
+Epoch 4: Train Loss: 1.4714, Val Loss: 1.1171, Val Accuracy: 60.07%, LR: 0.009938
+Epoch 5, Batch 0, Loss: 1.2648, LR: 0.009938
+Batch Duration: 362.52s, Epoch Duration: 362.52s, Total Duration: 362.52s
+Epoch 5: Train Loss: 1.2152, Val Loss: 1.0211, Val Accuracy: 62.70%, LR: 0.009911
+Epoch 6, Batch 0, Loss: 1.1973, LR: 0.009911
+Batch Duration: 432.36s, Epoch Duration: 432.36s, Total Duration: 432.36s
+Epoch 6: Train Loss: 1.0139, Val Loss: 0.6821, Val Accuracy: 77.88%, LR: 0.009880
+Epoch 7, Batch 0, Loss: 0.9708, LR: 0.009880
+Batch Duration: 504.50s, Epoch Duration: 504.50s, Total Duration: 504.50s
+Epoch 7: Train Loss: 0.8560, Val Loss: 0.6575, Val Accuracy: 76.19%, LR: 0.009843
+Epoch 8, Batch 0, Loss: 0.6748, LR: 0.009843
+Batch Duration: 577.24s, Epoch Duration: 577.24s, Total Duration: 577.24s
+Epoch 8: Train Loss: 0.7457, Val Loss: 0.4353, Val Accuracy: 84.82%, LR: 0.009801
+Epoch 9, Batch 0, Loss: 0.6667, LR: 0.009801
+Batch Duration: 648.56s, Epoch Duration: 648.56s, Total Duration: 648.56s
+Epoch 9: Train Loss: 0.6235, Val Loss: 0.3650, Val Accuracy: 88.47%, LR: 0.009755
+Epoch 10, Batch 0, Loss: 0.4598, LR: 0.009755
+Batch Duration: 719.90s, Epoch Duration: 719.90s, Total Duration: 719.90s
+Epoch 10: Train Loss: 0.5712, Val Loss: 0.6454, Val Accuracy: 79.66%, LR: 0.009704
+Epoch 11, Batch 0, Loss: 0.5468, LR: 0.009704
+Batch Duration: 790.32s, Epoch Duration: 790.32s, Total Duration: 790.32s
+Epoch 11: Train Loss: 0.4789, Val Loss: 0.2441, Val Accuracy: 92.78%, LR: 0.009649
+Epoch 12, Batch 0, Loss: 0.4712, LR: 0.009649
+Batch Duration: 862.83s, Epoch Duration: 862.83s, Total Duration: 862.83s
+Epoch 12: Train Loss: 0.4583, Val Loss: 0.1866, Val Accuracy: 94.47%, LR: 0.009589
+Epoch 13, Batch 0, Loss: 0.4787, LR: 0.009589
+Batch Duration: 933.26s, Epoch Duration: 933.26s, Total Duration: 933.26s
+Epoch 13: Train Loss: 0.4171, Val Loss: 0.2107, Val Accuracy: 92.69%, LR: 0.009524
+Epoch 14, Batch 0, Loss: 0.4331, LR: 0.009524
+Batch Duration: 1003.44s, Epoch Duration: 1003.44s, Total Duration: 1003.44s
+Epoch 14: Train Loss: 0.3737, Val Loss: 0.1606, Val Accuracy: 95.03%, LR: 0.009455
+Epoch 15, Batch 0, Loss: 0.4065, LR: 0.009455
+Batch Duration: 1074.29s, Epoch Duration: 1074.29s, Total Duration: 1074.29s
+Epoch 15: Train Loss: 0.3547, Val Loss: 0.1129, Val Accuracy: 97.19%, LR: 0.009382
+Epoch 16, Batch 0, Loss: 0.2108, LR: 0.009382
+Batch Duration: 1144.27s, Epoch Duration: 1144.27s, Total Duration: 1144.27s
+Epoch 16: Train Loss: 0.2682, Val Loss: 0.1087, Val Accuracy: 96.25%, LR: 0.009304
+Epoch 17, Batch 0, Loss: 0.2649, LR: 0.009304
+Batch Duration: 1224.11s, Epoch Duration: 1224.11s, Total Duration: 1224.11s
+Epoch 17: Train Loss: 0.2580, Val Loss: 0.0734, Val Accuracy: 98.13%, LR: 0.009222
+Epoch 18, Batch 0, Loss: 0.2046, LR: 0.009222
+Batch Duration: 1301.04s, Epoch Duration: 1301.04s, Total Duration: 1301.04s
+Epoch 18: Train Loss: 0.2401, Val Loss: 0.0664, Val Accuracy: 98.31%, LR: 0.009135
+Epoch 19, Batch 0, Loss: 0.1727, LR: 0.009135
+Batch Duration: 1372.33s, Epoch Duration: 1372.33s, Total Duration: 1372.33s
+Epoch 19: Train Loss: 0.2286, Val Loss: 0.0951, Val Accuracy: 97.09%, LR: 0.009045
+Epoch 20, Batch 0, Loss: 0.2879, LR: 0.009045
+Batch Duration: 1442.64s, Epoch Duration: 1442.64s, Total Duration: 1442.64s
+Epoch 20: Train Loss: 0.2272, Val Loss: 0.0604, Val Accuracy: 97.94%, LR: 0.008951
+Epoch 21, Batch 0, Loss: 0.1110, LR: 0.008951
+Batch Duration: 1513.04s, Epoch Duration: 1513.04s, Total Duration: 1513.04s
+Epoch 21: Train Loss: 0.1942, Val Loss: 0.0478, Val Accuracy: 98.50%, LR: 0.008853
+Epoch 22, Batch 0, Loss: 0.1389, LR: 0.008853
+Batch Duration: 1583.89s, Epoch Duration: 1583.89s, Total Duration: 1583.89s
+Epoch 22: Train Loss: 0.1656, Val Loss: 0.0476, Val Accuracy: 98.22%, LR: 0.008751
+Epoch 23, Batch 0, Loss: 0.1126, LR: 0.008751
+Batch Duration: 1653.96s, Epoch Duration: 1653.96s, Total Duration: 1653.96s
+Epoch 23: Train Loss: 0.1557, Val Loss: 0.0371, Val Accuracy: 99.16%, LR: 0.008645
+Epoch 24, Batch 0, Loss: 0.1390, LR: 0.008645
+Batch Duration: 1724.82s, Epoch Duration: 1724.82s, Total Duration: 1724.82s
+Epoch 24: Train Loss: 0.1528, Val Loss: 0.0364, Val Accuracy: 98.88%, LR: 0.008536
+Epoch 25, Batch 0, Loss: 0.1477, LR: 0.008536
+Batch Duration: 1795.65s, Epoch Duration: 1795.65s, Total Duration: 1795.65s
+Epoch 25: Train Loss: 0.1277, Val Loss: 0.0253, Val Accuracy: 99.53%, LR: 0.008423
+Epoch 26, Batch 0, Loss: 0.0994, LR: 0.008423
+Batch Duration: 1865.91s, Epoch Duration: 1865.91s, Total Duration: 1865.91s
+Epoch 26: Train Loss: 0.1349, Val Loss: 0.0320, Val Accuracy: 98.69%, LR: 0.008307
+Epoch 27, Batch 0, Loss: 0.1629, LR: 0.008307
+Batch Duration: 1935.95s, Epoch Duration: 1935.95s, Total Duration: 1935.95s
+Epoch 27: Train Loss: 0.1204, Val Loss: 0.0229, Val Accuracy: 99.44%, LR: 0.008187
+Epoch 28, Batch 0, Loss: 0.0722, LR: 0.008187
+Batch Duration: 2018.93s, Epoch Duration: 2018.93s, Total Duration: 2018.93s
+Epoch 28: Train Loss: 0.1142, Val Loss: 0.0200, Val Accuracy: 98.97%, LR: 0.008065
+Epoch 29, Batch 0, Loss: 0.2138, LR: 0.008065
+Batch Duration: 2102.29s, Epoch Duration: 2102.29s, Total Duration: 2102.29s
+Epoch 29: Train Loss: 0.1103, Val Loss: 0.0189, Val Accuracy: 99.63%, LR: 0.007939
+Epoch 30, Batch 0, Loss: 0.1072, LR: 0.007939
+Batch Duration: 2188.43s, Epoch Duration: 2188.43s, Total Duration: 2188.43s
+Epoch 30: Train Loss: 0.0965, Val Loss: 0.0281, Val Accuracy: 99.16%, LR: 0.007810
+Epoch 31, Batch 0, Loss: 0.0359, LR: 0.007810
+Batch Duration: 2273.03s, Epoch Duration: 2273.03s, Total Duration: 2273.03s
+Epoch 31: Train Loss: 0.1095, Val Loss: 0.0173, Val Accuracy: 99.34%, LR: 0.007679
+Epoch 32, Batch 0, Loss: 0.0930, LR: 0.007679
+Batch Duration: 2356.49s, Epoch Duration: 2356.49s, Total Duration: 2356.49s
+Epoch 32: Train Loss: 0.1117, Val Loss: 0.0146, Val Accuracy: 99.53%, LR: 0.007545
+Epoch 33, Batch 0, Loss: 0.1172, LR: 0.007545
+Batch Duration: 2441.51s, Epoch Duration: 2441.51s, Total Duration: 2441.51s
+Epoch 33: Train Loss: 0.1025, Val Loss: 0.0134, Val Accuracy: 99.53%, LR: 0.007409
+Epoch 34, Batch 0, Loss: 0.0990, LR: 0.007409
+Batch Duration: 2525.96s, Epoch Duration: 2525.96s, Total Duration: 2525.96s
+Epoch 34: Train Loss: 0.1038, Val Loss: 0.0209, Val Accuracy: 99.63%, LR: 0.007270
+Epoch 35, Batch 0, Loss: 0.0818, LR: 0.007270
+Batch Duration: 2610.34s, Epoch Duration: 2610.34s, Total Duration: 2610.34s
+Epoch 35: Train Loss: 0.1021, Val Loss: 0.0167, Val Accuracy: 99.63%, LR: 0.007129
+Epoch 36, Batch 0, Loss: 0.0494, LR: 0.007129
+Batch Duration: 2692.84s, Epoch Duration: 2692.84s, Total Duration: 2692.84s
+Epoch 36: Train Loss: 0.0961, Val Loss: 0.0121, Val Accuracy: 99.53%, LR: 0.006986
+Epoch 37, Batch 0, Loss: 0.0897, LR: 0.006986
+Batch Duration: 2776.98s, Epoch Duration: 2776.98s, Total Duration: 2776.98s
+Epoch 37: Train Loss: 0.0992, Val Loss: 0.0201, Val Accuracy: 99.16%, LR: 0.006841
+Epoch 38, Batch 0, Loss: 0.0433, LR: 0.006841
+Batch Duration: 2861.49s, Epoch Duration: 2861.49s, Total Duration: 2861.49s
+Epoch 38: Train Loss: 0.0656, Val Loss: 0.0146, Val Accuracy: 99.44%, LR: 0.006694
+Epoch 39, Batch 0, Loss: 0.1040, LR: 0.006694
+Batch Duration: 2946.08s, Epoch Duration: 2946.08s, Total Duration: 2946.08s
+Epoch 39: Train Loss: 0.0804, Val Loss: 0.0171, Val Accuracy: 99.72%, LR: 0.006545
+Epoch 40, Batch 0, Loss: 0.0271, LR: 0.006545
+Batch Duration: 3031.61s, Epoch Duration: 3031.61s, Total Duration: 3031.61s
+Epoch 40: Train Loss: 0.0615, Val Loss: 0.0095, Val Accuracy: 99.72%, LR: 0.006395
+Epoch 41, Batch 0, Loss: 0.1362, LR: 0.006395
+Batch Duration: 3116.21s, Epoch Duration: 3116.21s, Total Duration: 3116.21s
+Epoch 41: Train Loss: 0.0818, Val Loss: 0.0126, Val Accuracy: 99.34%, LR: 0.006243
+Epoch 42, Batch 0, Loss: 0.0444, LR: 0.006243
+Batch Duration: 3200.25s, Epoch Duration: 3200.25s, Total Duration: 3200.25s
+Epoch 42: Train Loss: 0.0645, Val Loss: 0.0125, Val Accuracy: 99.34%, LR: 0.006091
+Epoch 43, Batch 0, Loss: 0.1277, LR: 0.006091
+Batch Duration: 3286.16s, Epoch Duration: 3286.16s, Total Duration: 3286.16s
+Epoch 43: Train Loss: 0.0753, Val Loss: 0.0167, Val Accuracy: 99.25%, LR: 0.005937
+Epoch 44, Batch 0, Loss: 0.0409, LR: 0.005937
+Batch Duration: 3370.14s, Epoch Duration: 3370.14s, Total Duration: 3370.14s
+Epoch 44: Train Loss: 0.0653, Val Loss: 0.0167, Val Accuracy: 99.34%, LR: 0.005782
+Epoch 45, Batch 0, Loss: 0.0332, LR: 0.005782
+Batch Duration: 3455.26s, Epoch Duration: 3455.26s, Total Duration: 3455.26s
+Epoch 45: Train Loss: 0.0664, Val Loss: 0.0191, Val Accuracy: 99.25%, LR: 0.005627
+Epoch 46, Batch 0, Loss: 0.0278, LR: 0.005627
+Batch Duration: 3539.19s, Epoch Duration: 3539.19s, Total Duration: 3539.19s
+Epoch 46: Train Loss: 0.0649, Val Loss: 0.0080, Val Accuracy: 99.81%, LR: 0.005471
+Epoch 47, Batch 0, Loss: 0.1038, LR: 0.005471
+Batch Duration: 3624.28s, Epoch Duration: 3624.28s, Total Duration: 3624.28s
+Epoch 47: Train Loss: 0.0620, Val Loss: 0.0111, Val Accuracy: 99.44%, LR: 0.005314
+Epoch 48, Batch 0, Loss: 0.1713, LR: 0.005314
+Batch Duration: 3707.83s, Epoch Duration: 3707.83s, Total Duration: 3707.83s
+Epoch 48: Train Loss: 0.0636, Val Loss: 0.0170, Val Accuracy: 99.06%, LR: 0.005157
+Epoch 49, Batch 0, Loss: 0.0507, LR: 0.005157
+Batch Duration: 3792.70s, Epoch Duration: 3792.70s, Total Duration: 3792.70s
+Epoch 49: Train Loss: 0.0559, Val Loss: 0.0126, Val Accuracy: 99.25%, LR: 0.005000
+Epoch 50, Batch 0, Loss: 0.0570, LR: 0.005000
+Batch Duration: 3878.01s, Epoch Duration: 3878.01s, Total Duration: 3878.01s
+Epoch 50: Train Loss: 0.0584, Val Loss: 0.0087, Val Accuracy: 99.63%, LR: 0.004843
+Epoch 51, Batch 0, Loss: 0.0311, LR: 0.004843
+Batch Duration: 3962.00s, Epoch Duration: 3962.00s, Total Duration: 3962.00s
+Epoch 51: Train Loss: 0.0564, Val Loss: 0.0067, Val Accuracy: 99.72%, LR: 0.004686
+Epoch 52, Batch 0, Loss: 0.0558, LR: 0.004686
+Batch Duration: 4046.60s, Epoch Duration: 4046.60s, Total Duration: 4046.60s
+Epoch 52: Train Loss: 0.0478, Val Loss: 0.0156, Val Accuracy: 99.63%, LR: 0.004529
+Epoch 53, Batch 0, Loss: 0.0631, LR: 0.004529
+Batch Duration: 4130.77s, Epoch Duration: 4130.77s, Total Duration: 4130.77s
+Epoch 53: Train Loss: 0.0471, Val Loss: 0.0078, Val Accuracy: 99.72%, LR: 0.004373
+Epoch 54, Batch 0, Loss: 0.0179, LR: 0.004373
+Batch Duration: 4217.09s, Epoch Duration: 4217.09s, Total Duration: 4217.09s
+Epoch 54: Train Loss: 0.0324, Val Loss: 0.0073, Val Accuracy: 99.72%, LR: 0.004218
+Epoch 55, Batch 0, Loss: 0.0093, LR: 0.004218
+Batch Duration: 4304.04s, Epoch Duration: 4304.04s, Total Duration: 4304.04s
+Epoch 55: Train Loss: 0.0340, Val Loss: 0.0062, Val Accuracy: 99.72%, LR: 0.004063
+Epoch 56, Batch 0, Loss: 0.0851, LR: 0.004063
+Batch Duration: 4389.40s, Epoch Duration: 4389.40s, Total Duration: 4389.40s
+Epoch 56: Train Loss: 0.0337, Val Loss: 0.0164, Val Accuracy: 99.63%, LR: 0.003909
+Epoch 57, Batch 0, Loss: 0.0293, LR: 0.003909
+Batch Duration: 4475.63s, Epoch Duration: 4475.63s, Total Duration: 4475.63s
+Epoch 57: Train Loss: 0.0386, Val Loss: 0.0037, Val Accuracy: 100.00%, LR: 0.003757
+Epoch 58, Batch 0, Loss: 0.0446, LR: 0.003757
+Batch Duration: 4562.42s, Epoch Duration: 4562.42s, Total Duration: 4562.42s
+Epoch 58: Train Loss: 0.0422, Val Loss: 0.0091, Val Accuracy: 99.63%, LR: 0.003605
+Epoch 59, Batch 0, Loss: 0.0194, LR: 0.003605
+Batch Duration: 4646.01s, Epoch Duration: 4646.01s, Total Duration: 4646.01s
+Epoch 59: Train Loss: 0.0424, Val Loss: 0.0070, Val Accuracy: 99.44%, LR: 0.003455
+Epoch 60, Batch 0, Loss: 0.0667, LR: 0.003455
+Batch Duration: 4732.45s, Epoch Duration: 4732.45s, Total Duration: 4732.45s
+Epoch 60: Train Loss: 0.0384, Val Loss: 0.0094, Val Accuracy: 99.63%, LR: 0.003306
+Epoch 61, Batch 0, Loss: 0.0083, LR: 0.003306
+Batch Duration: 4828.33s, Epoch Duration: 4828.33s, Total Duration: 4828.33s
+Epoch 61: Train Loss: 0.0387, Val Loss: 0.0071, Val Accuracy: 99.72%, LR: 0.003159
+Epoch 62, Batch 0, Loss: 0.0136, LR: 0.003159
+Batch Duration: 4921.70s, Epoch Duration: 4921.70s, Total Duration: 4921.70s
+Epoch 62: Train Loss: 0.0286, Val Loss: 0.0078, Val Accuracy: 99.44%, LR: 0.003014
+Epoch 63, Batch 0, Loss: 0.0386, LR: 0.003014
+Batch Duration: 5007.83s, Epoch Duration: 5007.83s, Total Duration: 5007.83s
+Epoch 63: Train Loss: 0.0347, Val Loss: 0.0108, Val Accuracy: 99.72%, LR: 0.002871
+Epoch 64, Batch 0, Loss: 0.0136, LR: 0.002871
+Batch Duration: 5092.95s, Epoch Duration: 5092.95s, Total Duration: 5092.95s
+Epoch 64: Train Loss: 0.0302, Val Loss: 0.0145, Val Accuracy: 99.63%, LR: 0.002730
+Epoch 65, Batch 0, Loss: 0.0197, LR: 0.002730
+Batch Duration: 5178.64s, Epoch Duration: 5178.64s, Total Duration: 5178.64s
+Epoch 65: Train Loss: 0.0326, Val Loss: 0.0104, Val Accuracy: 99.72%, LR: 0.002591
+Epoch 66, Batch 0, Loss: 0.0203, LR: 0.002591
+Batch Duration: 5263.59s, Epoch Duration: 5263.59s, Total Duration: 5263.59s
+Epoch 66: Train Loss: 0.0311, Val Loss: 0.0068, Val Accuracy: 99.72%, LR: 0.002455
+Epoch 67, Batch 0, Loss: 0.0055, LR: 0.002455
+Batch Duration: 5347.91s, Epoch Duration: 5347.91s, Total Duration: 5347.91s
+Epoch 67: Train Loss: 0.0329, Val Loss: 0.0077, Val Accuracy: 99.72%, LR: 0.002321
+Epoch 68, Batch 0, Loss: 0.0164, LR: 0.002321
+Batch Duration: 5434.04s, Epoch Duration: 5434.04s, Total Duration: 5434.04s
+Epoch 68: Train Loss: 0.0341, Val Loss: 0.0101, Val Accuracy: 99.72%, LR: 0.002190
+Epoch 69, Batch 0, Loss: 0.0031, LR: 0.002190
+Batch Duration: 5519.20s, Epoch Duration: 5519.20s, Total Duration: 5519.20s
+Epoch 69: Train Loss: 0.0313, Val Loss: 0.0091, Val Accuracy: 99.63%, LR: 0.002061
+Epoch 70, Batch 0, Loss: 0.0431, LR: 0.002061
+Batch Duration: 5605.92s, Epoch Duration: 5605.92s, Total Duration: 5605.92s
+Epoch 70: Train Loss: 0.0332, Val Loss: 0.0077, Val Accuracy: 99.72%, LR: 0.001935
+Epoch 71, Batch 0, Loss: 0.0107, LR: 0.001935
+Batch Duration: 5691.69s, Epoch Duration: 5691.69s, Total Duration: 5691.69s
+Epoch 71: Train Loss: 0.0308, Val Loss: 0.0068, Val Accuracy: 99.72%, LR: 0.001813
+Epoch 72, Batch 0, Loss: 0.0201, LR: 0.001813
+Batch Duration: 5776.30s, Epoch Duration: 5776.30s, Total Duration: 5776.30s
+Epoch 72: Train Loss: 0.0271, Val Loss: 0.0132, Val Accuracy: 99.72%, LR: 0.001693
+Epoch 73, Batch 0, Loss: 0.0496, LR: 0.001693
+Batch Duration: 5981.17s, Epoch Duration: 5981.17s, Total Duration: 5981.17s
+Epoch 73: Train Loss: 0.0271, Val Loss: 0.0133, Val Accuracy: 99.72%, LR: 0.001577
+Epoch 74, Batch 0, Loss: 0.0158, LR: 0.001577
+Batch Duration: 6067.02s, Epoch Duration: 6067.02s, Total Duration: 6067.02s
+Epoch 74: Train Loss: 0.0205, Val Loss: 0.0125, Val Accuracy: 99.72%, LR: 0.001464
+Epoch 75, Batch 0, Loss: 0.0232, LR: 0.001464
+Batch Duration: 6155.24s, Epoch Duration: 6155.24s, Total Duration: 6155.24s
+Epoch 75: Train Loss: 0.0217, Val Loss: 0.0127, Val Accuracy: 99.72%, LR: 0.001355
+Epoch 76, Batch 0, Loss: 0.0209, LR: 0.001355
+Batch Duration: 6240.98s, Epoch Duration: 6240.98s, Total Duration: 6240.98s
+Epoch 76: Train Loss: 0.0227, Val Loss: 0.0095, Val Accuracy: 99.72%, LR: 0.001249
+Epoch 77, Batch 0, Loss: 0.0040, LR: 0.001249
+Batch Duration: 6328.88s, Epoch Duration: 6328.88s, Total Duration: 6328.88s
+Epoch 77: Train Loss: 0.0244, Val Loss: 0.0127, Val Accuracy: 99.72%, LR: 0.001147
+Epoch 78, Batch 0, Loss: 0.0315, LR: 0.001147
+Batch Duration: 6413.82s, Epoch Duration: 6413.82s, Total Duration: 6413.82s
+Epoch 78: Train Loss: 0.0265, Val Loss: 0.0117, Val Accuracy: 99.72%, LR: 0.001049
+Epoch 79, Batch 0, Loss: 0.0120, LR: 0.001049
+Batch Duration: 6500.51s, Epoch Duration: 6500.51s, Total Duration: 6500.51s
+Epoch 79: Train Loss: 0.0230, Val Loss: 0.0108, Val Accuracy: 99.72%, LR: 0.000955
+Epoch 80, Batch 0, Loss: 0.0228, LR: 0.000955
+Batch Duration: 6586.33s, Epoch Duration: 6586.33s, Total Duration: 6586.33s
+Epoch 80: Train Loss: 0.0263, Val Loss: 0.0113, Val Accuracy: 99.72%, LR: 0.000865
+Epoch 81, Batch 0, Loss: 0.0071, LR: 0.000865
+Batch Duration: 6671.61s, Epoch Duration: 6671.61s, Total Duration: 6671.61s
+Epoch 81: Train Loss: 0.0239, Val Loss: 0.0101, Val Accuracy: 99.72%, LR: 0.000778
+Epoch 82, Batch 0, Loss: 0.0299, LR: 0.000778
+Batch Duration: 6757.51s, Epoch Duration: 6757.51s, Total Duration: 6757.51s
+Epoch 82: Train Loss: 0.0210, Val Loss: 0.0083, Val Accuracy: 99.72%, LR: 0.000696
+Epoch 83, Batch 0, Loss: 0.0124, LR: 0.000696
+Batch Duration: 6845.59s, Epoch Duration: 6845.59s, Total Duration: 6845.59s
+Epoch 83: Train Loss: 0.0234, Val Loss: 0.0079, Val Accuracy: 99.72%, LR: 0.000618
+Epoch 84, Batch 0, Loss: 0.0045, LR: 0.000618
+Batch Duration: 6931.75s, Epoch Duration: 6931.75s, Total Duration: 6931.75s
+Epoch 84: Train Loss: 0.0150, Val Loss: 0.0102, Val Accuracy: 99.72%, LR: 0.000545
+Epoch 85, Batch 0, Loss: 0.0134, LR: 0.000545
+Batch Duration: 7019.48s, Epoch Duration: 7019.48s, Total Duration: 7019.48s
+Epoch 85: Train Loss: 0.0261, Val Loss: 0.0103, Val Accuracy: 99.72%, LR: 0.000476
+Epoch 86, Batch 0, Loss: 0.0051, LR: 0.000476
+Batch Duration: 7111.98s, Epoch Duration: 7111.98s, Total Duration: 7111.98s
+Epoch 86: Train Loss: 0.0206, Val Loss: 0.0093, Val Accuracy: 99.72%, LR: 0.000411
+Epoch 87, Batch 0, Loss: 0.0276, LR: 0.000411
+Batch Duration: 7198.63s, Epoch Duration: 7198.63s, Total Duration: 7198.63s
+Epoch 87: Train Loss: 0.0200, Val Loss: 0.0108, Val Accuracy: 99.72%, LR: 0.000351
+Epoch 88, Batch 0, Loss: 0.0231, LR: 0.000351
+Batch Duration: 7285.60s, Epoch Duration: 7285.60s, Total Duration: 7285.60s
+Epoch 88: Train Loss: 0.0205, Val Loss: 0.0090, Val Accuracy: 99.72%, LR: 0.000296
+Epoch 89, Batch 0, Loss: 0.0168, LR: 0.000296
+Batch Duration: 7372.58s, Epoch Duration: 7372.58s, Total Duration: 7372.58s
+Epoch 89: Train Loss: 0.0198, Val Loss: 0.0106, Val Accuracy: 99.72%, LR: 0.000245
+Epoch 90, Batch 0, Loss: 0.0261, LR: 0.000245
+Batch Duration: 7457.19s, Epoch Duration: 7457.19s, Total Duration: 7457.19s
+Epoch 90: Train Loss: 0.0209, Val Loss: 0.0093, Val Accuracy: 99.72%, LR: 0.000199
+Epoch 91, Batch 0, Loss: 0.0192, LR: 0.000199
+Batch Duration: 7541.67s, Epoch Duration: 7541.67s, Total Duration: 7541.67s
+Epoch 91: Train Loss: 0.0213, Val Loss: 0.0112, Val Accuracy: 99.72%, LR: 0.000157
+Epoch 92, Batch 0, Loss: 0.0075, LR: 0.000157
+Batch Duration: 7627.12s, Epoch Duration: 7627.12s, Total Duration: 7627.12s
+Epoch 92: Train Loss: 0.0221, Val Loss: 0.0122, Val Accuracy: 99.72%, LR: 0.000120
+Epoch 93, Batch 0, Loss: 0.0054, LR: 0.000120
+Batch Duration: 7714.34s, Epoch Duration: 7714.34s, Total Duration: 7714.34s
+Epoch 93: Train Loss: 0.0177, Val Loss: 0.0102, Val Accuracy: 99.72%, LR: 0.000089
+Epoch 94, Batch 0, Loss: 0.0299, LR: 0.000089
+Batch Duration: 7804.68s, Epoch Duration: 7804.68s, Total Duration: 7804.68s
+Epoch 94: Train Loss: 0.0254, Val Loss: 0.0100, Val Accuracy: 99.72%, LR: 0.000062
+Epoch 95, Batch 0, Loss: 0.0284, LR: 0.000062
+Batch Duration: 7891.42s, Epoch Duration: 7891.42s, Total Duration: 7891.42s
+Epoch 95: Train Loss: 0.0251, Val Loss: 0.0109, Val Accuracy: 99.72%, LR: 0.000039
+Epoch 96, Batch 0, Loss: 0.0313, LR: 0.000039
+Batch Duration: 7978.31s, Epoch Duration: 7978.31s, Total Duration: 7978.31s
+Epoch 96: Train Loss: 0.0203, Val Loss: 0.0093, Val Accuracy: 99.72%, LR: 0.000022
+Epoch 97, Batch 0, Loss: 0.0043, LR: 0.000022
+Batch Duration: 8064.09s, Epoch Duration: 8064.09s, Total Duration: 8064.09s
+Epoch 97: Train Loss: 0.0216, Val Loss: 0.0102, Val Accuracy: 99.72%, LR: 0.000010
+Epoch 98, Batch 0, Loss: 0.0058, LR: 0.000010
+Batch Duration: 8149.74s, Epoch Duration: 8149.74s, Total Duration: 8149.74s
+Epoch 98: Train Loss: 0.0195, Val Loss: 0.0119, Val Accuracy: 99.72%, LR: 0.000002
+Epoch 99, Batch 0, Loss: 0.0463, LR: 0.000002
+Batch Duration: 8237.79s, Epoch Duration: 8237.79s, Total Duration: 8237.79s
+Epoch 99: Train Loss: 0.0197, Val Loss: 0.0099, Val Accuracy: 99.72%, LR: 0.000000

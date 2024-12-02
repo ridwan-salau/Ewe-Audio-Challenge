@@ -22,23 +22,33 @@ class STFTTransform:
         return stft_result
 
 class TrimSilence:
-    def __init__(self, sample_rate: int, trigger_level: float = 7.0):
+    def __init__(self, sample_rate: int, trigger_level: float = 0.01):
         self.sample_rate = sample_rate
         self.trigger_level = trigger_level
 
     def __call__(self, waveform: torch.Tensor) -> torch.Tensor:
-        vad = T.Vad(sample_rate=self.sample_rate, trigger_level=self.trigger_level)
-
-        # Reverse, trim silence from the end (which is now the beginning), and reverse back
-        waveform_reversed = torch.flip(waveform, dims=[0])    
-        # Trim silence from the beginning
-        waveform_front_trim = vad(waveform_reversed)
-    
-        waveform_reversed = torch.flip(waveform_front_trim, dims=[0]) if waveform_front_trim.shape[0] > 0 else waveform_reversed
-        # return waveform_reversed
-        waveform_end_trim = vad(waveform_reversed)
+        # Convert torch tensor to numpy array
+        audio = waveform.numpy().squeeze()
         
-        return waveform_end_trim if waveform_end_trim.shape[1] > 0.5*waveform.shape[1] else waveform
+        # Calculate the absolute value of the signal
+        abs_audio = np.abs(audio)
+        
+        # Find the indices where the signal is above the threshold
+        non_silent_indices = np.where(abs_audio > self.trigger_level)[0]
+        
+        if len(non_silent_indices) == 0:
+            return waveform
+            
+        # Get the start and end indices with padding
+        padding = int(self.sample_rate * 0.1)  # 100ms padding
+        start = max(0, non_silent_indices[0] - padding)
+        end = min(len(audio), non_silent_indices[-1] + padding)
+        
+        # Trim the audio
+        trimmed_audio = audio[start:end]
+        
+        # Convert back to torch tensor
+        return torch.from_numpy(trimmed_audio).unsqueeze(0)
 
 class OneHot:
     def __init__(self, CLASS_LABELS_MAP: dict):
